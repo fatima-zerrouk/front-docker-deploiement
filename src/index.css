@@ -1,0 +1,71 @@
+@import 'tailwindcss';
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap'); */
+
+@theme {
+  --color-terracotta: #d48269;
+  --color-cream: #faf2e5;
+  --color-lin: #ede8e2;
+  --color-brown: #3e1a0a;
+  --shadow-line-b: 0 4px 4px rgba(62, 26, 10, 0.3);
+  --shadow-line-t: 0 -4px 4px rgba(62, 26, 10, 0.3);
+  --shadow-card: 0 10px 30px rgba(62, 26, 10, 0.3);
+  --font-poppins: 'Poppins', sans-serif;
+
+  --radius-input: 6px;
+  --radius-button: 8px;
+  --radius-card: 12px;
+  /* --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 48px; */
+  --margin-mobile: 24px;
+}
+@layer base {
+  body {
+    text-decoration: none;
+    font-family: var(--font-poppins);
+  }
+  body {
+    @apply text-brown;
+    /* Texte Regular : 16px mobile -> 18px PC */
+    font-size: 1rem;
+    @variant md {
+      font-size: 1.125rem;
+    }
+  }
+}
+@layer components {
+  /* H1 Bold : 32px mobile -> 48px PC */
+  .title-h1 {
+    @apply font-bold text-brown;
+    font-size: 2rem;
+    line-height: 1.2;
+    @variant md {
+      font-size: 3rem;
+    }
+  }
+  /* H2 Semi-bold : 24px mobile -> 32px PC */
+  .title-h2 {
+    @apply font-semibold text-brown;
+    font-size: 1.5rem;
+    @variant md {
+      font-size: 2rem;
+    }
+  }
+  /* H3 Medium : 20px mobile -> 24px PC */
+  .title-h3 {
+    @apply font-medium text-brown;
+    font-size: 1.25rem;
+    @variant md {
+      font-size: 1.5rem;
+    }
+  }
+  /* Texte Regular : séjà géré dans le body, mais au cas où */
+  .text-main {
+    @apply font-normal text-brown;
+    font-size: 1rem;
+    @variant md {
+      font-size: 1.125rem;
+    }
+  }
+}
