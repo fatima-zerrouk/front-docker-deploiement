@@ -9,6 +9,9 @@ RUN npm install
 
 # copie tout le reste du code source dans /app
 COPY . .
+
+ARG VITE_API_URL
+ENV VITE_API_URL=$VITE_API_URL
 # Lance la compilation. Le dossier dist/ est créé dans /app/dist
 RUN npm run build
 
