@@ -4,8 +4,9 @@
 export function useFetch() {
   // const { logout } = useContext(AuthContext);
   const API_URL = import.meta.env.VITE_API_URL;
-  console.log("API_URL ", import.meta.env.VITE_API_URL);
-
+  console.log("ENV =", import.meta.env);
+  console.log("API_URL =", import.meta.env.VITE_API_URL);
+  
   async function apiFetch(url, options = {}) {
     const token = localStorage.getItem('token'); //récupère token
 
